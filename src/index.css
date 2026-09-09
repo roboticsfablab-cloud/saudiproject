@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: #fdfbf7;
+    color: #27251f;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-5 sm:px-8 lg:px-12;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-l from-saudi-600 via-saudi-500 to-sea-500;
+  }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-xl border border-white/60 shadow-xl;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl font-bold text-white bg-gradient-to-l from-saudi-600 to-saudi-500 shadow-lg shadow-saudi-500/30 hover:shadow-xl hover:shadow-saudi-500/40 hover:-translate-y-0.5 transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl font-bold text-mountain-700 bg-white border-2 border-mountain-200 hover:border-saudi-400 hover:text-saudi-600 hover:-translate-y-0.5 transition-all duration-300;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-mountain-600 hover:text-saudi-600 hover:bg-saudi-50 transition-all duration-200;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f8f1e4;
+}
+::-webkit-scrollbar-thumb {
+  background: #c99a4a;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b07f38;
+}
